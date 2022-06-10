@@ -1,5 +1,8 @@
 *{
   color: rgba(212,127,127,1);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
@@ -20,9 +23,20 @@ code {
   background-color: pink !important;
   
 }
-.splide__arrow.splide__arrow--next path {
-  color: white !important;
+.splide__arrow svg {
+  fill: #FFFFFF;
 }
+.splide__arrow.splide__arrow--next{
+  width: 48px;
+  height: 48px;
+  color: #FFFFFF;
+}
+.splide__arrow.splide__arrow--prev{
+  width: 48px;
+  height: 48px;
+  color: #FFFFFF;
+}
+
 .splide__arrow.splide__arrow--prev {
   background-color: pink !important;
 }

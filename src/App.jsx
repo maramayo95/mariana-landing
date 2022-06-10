@@ -1,5 +1,6 @@
 import './App.css'
 import Carrousel from './Components/Carrousel/Carrousel'
+import FormContact from './Components/FormContact/FormContact'
 import NavBar from './Components/NavBar/NavBar'
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <Carrousel/>
+      {/* <Carrousel/> */}
+      <FormContact/>
     </div>
   )
 }
