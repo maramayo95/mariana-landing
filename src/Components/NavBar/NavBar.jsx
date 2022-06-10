@@ -1,50 +1,51 @@
-import React from 'react'
-import { useEffect, useState } from 'react'
-import './Navbar.css'
-import { FaBars } from "react-icons/fa";
-import {Link} from 'react-scroll'
+import { useState } from "react";
+import "./NavBar.css";
+import logo from './logo.png'
 
+export default function Navbar() {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
 
-
-const NavBar = () => {
-    const [toggleMenu, setToggleMenu] = useState(false)
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-
-    useEffect(() => {
-
-        const changeWidth = () => {
-          setScreenWidth(window.innerWidth);
-        }
-    
-        window.addEventListener('resize', changeWidth)
-
-        return () => {
-            window.removeEventListener('resize', changeWidth)
-        }
-    
-      }, [])
-
-
-    const toggleNav = () => {
-        setToggleMenu(!toggleMenu)
-      }
   return (
-    <nav>
-      {(toggleMenu || screenWidth > 500) && (
-      <ul className="list">
-      <Link className="items" to="home" smooth={true} duration={1000}>Home</Link>
-      <Link className="items" to="about-me" smooth={true} duration={1000}>About</Link>
-      <Link className="items" to="skills" smooth={true} duration={1000}>Skills</Link>
-      <Link className="items" to="projects" smooth={true} duration={1000}>Projects</Link>
-      <Link className="items" to="contact" smooth={true} duration={1000}>Contact</Link>
-      </ul>
-      )}
-      <div className="line-nav">
+    <nav className="navigation">
+      <img src={logo} className="brand-name"/>
+        
+      <button
+        className="hamburger"
+        onClick={() => {
+          setIsNavExpanded(!isNavExpanded);
+        }}
+      >
+        {/* icon from Heroicons.com */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5"
+          viewBox="0 0 20 20"
+          fill="#d47f7f"
+        >
+          <path
+            fillRule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
+      <div
+        className={
+          isNavExpanded ? "navigation-menu expanded" : "navigation-menu"
+        }
+      >
+        <ul>
+          <li>
+            <a href="/home">Home</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
       </div>
-
-    <button onClick={toggleNav} className="btn"><FaBars/></button>
     </nav>
-  )
+  );
 }
-
-export default NavBar

@@ -1,6 +1,5 @@
 *{
   color: rgba(212,127,127,1);
-  text-shadow: 1px 1px 1px rgb(169, 99, 99);
 }
 body {
   margin: 0;
@@ -17,3 +16,17 @@ code {
     monospace;
 }
 
+.splide__arrow.splide__arrow--next {
+  background-color: pink !important;
+  
+}
+.splide__arrow.splide__arrow--next path {
+  color: white !important;
+}
+.splide__arrow.splide__arrow--prev {
+  background-color: pink !important;
+}
+
+.splide__pagination__page.is-active {
+  background-color: pink;
+}
