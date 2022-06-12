@@ -10,13 +10,17 @@ const FormContact = () => {
             <h3>Contacto</h3>
           </div>
           <div className="input-div">
-            <input type="text" />
-            <input type="text" />
-            <input type="text" />
+            <input type="text" placeholder="Escribí acá tu nombre y apellido" />
+            <input type="text" placeholder="Escribí acá tú dirección de mail" />
+            <input type="text" placeholder="Escribí acá el asunto de tu consulta" />
           </div>
 
           <div className="textA-div">
-            <textarea type="text" />
+            <textarea type="text" placeholder="Escribí acá tú mensaje" />
+          </div>  
+
+          <div className="div-btn-form">
+            <button className="btn-form" type="submit">Enviar Consulta</button>
           </div>
         </form>
       </section>
