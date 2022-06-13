@@ -222,3 +222,9 @@ hacer que div de titulo tenga 100% del contenedor */
 
 
 }
+
+.error-message{
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom:20px;
+}
