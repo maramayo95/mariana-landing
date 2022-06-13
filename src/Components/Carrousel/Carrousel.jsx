@@ -19,7 +19,7 @@ const Carrousel = () => {
     <div>
       <Splide
         className="splide"
-        options={{ rewind: true, arrows: true, pagination: true }}
+        options={{ rewind: true, arrows: true, pagination: false }}
         aria-label="React Splide Example"
       >
         {carImg.map((arr) => (
