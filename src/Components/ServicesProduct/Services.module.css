@@ -1,0 +1,101 @@
+.containerServices{   /*contenedor seccion servicios*/
+    margin-top: 50px;
+}
+.titleServices{   /*titulo de servicios*/
+    font-size: 64px;
+    margin-left: 30px;
+    color:#E59C9C;
+    font-family: 'Montserrat', sans-serif;
+}
+.services{       /*contenido servicios*/
+    margin-top: 80px;
+}
+.products{   /*borde seccion servicios*/
+    border-right: 4px dotted #E59C9C;
+    padding-left: 50px;
+}
+.productsFinal{  /*quitar borde producto final*/
+    padding-left: 50px;
+
+}
+.titleProducts{  /*titulo de productos*/
+    margin-top:30px;
+    color:#D68686;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.descriptionProducts{  /*descripcion de productos*/
+    color:#541F08;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 85%;
+}
+
+/* resoluciones medianas */
+@media screen and (min-width:520px) and (max-width:990px){
+    .products{   /* seccion productos*/
+        margin-bottom: 40px;
+        border-right: none;
+        text-align: center;
+        padding-left: 0;
+    }
+    .titleProducts{   /*titulo productos*/
+        text-align: center;
+    }
+    .descriptionProducts{   /*Descripcion productos*/
+        text-align: center;
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titleServices{   /*titulo servicios*/
+        text-align: center;
+        margin-left: auto;
+        margin-bottom: 80px;
+    }
+    .productsFinal{  /*producto final 3 columna*/
+        padding-left: 0;
+        text-align: center;
+    }
+    .services{   /*contenido servicios*/
+        margin-top: 50px;
+    }
+}
+
+/* resoluciones pequeñas */
+
+@media screen and (max-width:520px){
+    .products{  /* seccion productos*/
+        margin-bottom: 40px;
+        border-right: none;
+        text-align: center;
+        padding-left: 0;    
+    }
+    .titleProducts{  /*titulo productos*/
+        text-align: center;
+    }
+    .descriptionProducts{   /*Descripcion productos*/
+        text-align: center;
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .titleServices{  /*titulo servicios*/
+        font-size: 50px;
+        text-align: center;
+        margin-left: auto;
+        margin-left: -15px;
+        margin-bottom: 80px;
+    }
+    .productsFinal{ /*producto final 3 columna*/
+        padding-left: 0;
+        text-align: center;
+    }
+    .services{ /*contenido servicios*/
+        margin-top: 50px;
+    }
+}
+
+
+

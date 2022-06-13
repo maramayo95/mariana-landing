@@ -16,7 +16,7 @@ const Carrousel = () => {
   }, [arrImg]);
 
   return (
-    <div>
+    <div id="home">
       <Splide
         className="splide"
         options={{ rewind: true, arrows: true, pagination: false }}

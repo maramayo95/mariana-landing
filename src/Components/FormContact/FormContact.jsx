@@ -14,7 +14,7 @@ const FormContact = () => {
 
   return (
     <div className="center-container">
-      <section className="form-design">
+      <section className="form-design" id="contact">
         <form onSubmit={handleSubmit((data)=> console.log(data)) }>
           <div className="title-form">
             <h3>Contacto</h3>
