@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/css";
+import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import "@splidejs/react-splide/css";
 import "@splidejs/react-splide/css/core";
 import "./Carrousel.css";
@@ -19,7 +19,28 @@ const Carrousel = () => {
     <div id="home">
       <Splide
         className="splide"
-        options={{ rewind: true, arrows: true, pagination: false }}
+        options={{
+          autoplay:true,
+          type: 'loop',
+          autoplaySpeed:1500,
+          arrows:true,
+          centerMode:true,
+          slidesToShow:1,
+          slidesToScroll:1
+          // arrows: true, 
+          // pagination: false, 
+          // autoplay: true, 
+          // autoplaySpeed:1500,
+          // pauseOnHover : true, 
+          // pauseOnFocus : false, 
+          // resetProgress: false
+          // autoScroll: {
+          //   speed: 1, 
+          //   pauseOnHover: false,
+          //   pauseOnFocus: false
+          // }
+        }}
+        // extensions={{ AutoScroll }}
         aria-label="React Splide Example"
       >
         {carImg.map((arr) => (

@@ -24,7 +24,7 @@ hacer que div de titulo tenga 100% del contenedor */
         
     }
     
-    .title-form{
+    .title-form h3{
         text-align: center;
         font-size: 2rem;
         line-height: 39px;
